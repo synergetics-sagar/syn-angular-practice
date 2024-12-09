@@ -1,0 +1,46 @@
+<h3>Simple Form</h3>
+<form [formGroup]="userForm" (submit)="submitForm()">
+    <input type="text" formControlName="name"> <br>
+    <input type="email" formControlName="email"> <br>
+    <input type="password" formControlName="password"> <br>
+    Gender:
+    <label for="male">Male</label>
+    <input type="radio"  formControlName="gender" value="male" id="male" />
+    <label for="female">Female</label> 
+    <input type="radio"  formControlName="gender" value="female" id="female" /><br>
+    <label for="role">Select Role:</label>
+    <select id="role" formControlName="role">
+        <option value="default">Select Role</option>
+        <option value="buyer">Buyer</option>
+        <option value="seller">Seller</option>
+    </select> <br>
+    <button type="submit">SUBMIT</button>
+</form>
+<h3>Form Data Table</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.role}}</td>
+            <td>
+                <button (click)="deleteUser(user.id)">DELETE</button>
+                <button routerLink="details/{{user.id}}">Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

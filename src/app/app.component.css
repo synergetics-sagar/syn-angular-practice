@@ -1,0 +1,14 @@
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li{
+    background: rgb(166, 0, 255);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

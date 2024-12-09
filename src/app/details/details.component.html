@@ -1,0 +1,15 @@
+<h2>User Details</h2>
+<h3>Name: {{user?.name}}</h3>
+<h3>Email: {{user?.email}}</h3>
+<h3>Gender: {{user?.gender}}</h3>
+<!-- <h3 *ngIf="user?.role=='buyer'; else seller" class="buyer">Role: {{user?.role}}</h3>
+<ng-template #seller>
+    <h3 class="seller">Role: {{user?.role}}</h3>
+</ng-template> -->
+
+<div [ngSwitch]="user?.role" [ngClass]="{'buyer':user?.role=='buyer', 'seller': user?.role=='seller'}">
+    <div *ngSwitchCase="'buyer'">Hello, Buyer</div>
+    <div *ngSwitchCase="'seller'">Hello, Seller</div>
+    <div *ngSwitchDefault>Hello, User</div>
+</div>
+

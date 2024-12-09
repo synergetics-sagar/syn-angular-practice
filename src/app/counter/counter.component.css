@@ -1,0 +1,16 @@
+.message {
+    color: red;
+    animation: infinite myanimation 3s;
+}
+
+/* @keyframes myanimation{
+    0%{
+        text-shadow: rgb(255, 0, 0) 1px 0 0px;
+    }
+    10%{
+        text-shadow: rgb(255, 0, 0) 1px 0 10px;       
+    }
+    20%{
+        text-shadow: rgb(255, 0, 0) 1px 0 20px;       
+    }
+} */
