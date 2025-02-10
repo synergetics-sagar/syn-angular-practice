@@ -1,0 +1,19 @@
+<strong>Name (Uppercase Pipe): </strong>
+<p> <code>{{product.name}} | uppercase </code> -> {{product.name | uppercase}}</p>
+<strong>Price (Currency Pipe): </strong>
+<p><code>{{product.price}} | currency:'INR':'symbol':'1.1-1'</code> -> {{product.price| currency:'INR':'symbol':'1.1-1' }}</p>
+<strong>Dealer Contact (Lowercase Pipe):</strong>
+<p><code>{{product.dealer}} | lowercase</code> -> {{product.dealer | lowercase}}</p>
+<strong>Description (Title Case Pipe): </strong>
+<p><code>{{product.description}} | titlecase</code> -> {{product.description | titlecase}}</p>
+<strong>Available By (Date Pipe):</strong>
+<p><code>{{product.availability}} | date:"fullDate"</code> -> {{product.availability | date:"fullDate"}}</p>
+<strong>Users (Async Pipe): </strong>
+<div>
+    <pre [innerText]="asyncPipeExampleTemplate"></pre>
+    <ul *ngFor="let user of users$ | async">
+        <li>{{user.name}}</li>
+    </ul>
+</div>
+<strong>Discounted Price (Custom Pipe): </strong>
+<p><code>{{product.price}} | discount:10 | currency:'INR':'symbol':'1.1-1'</code> -> {{product.price | discount:10 | currency:'INR':'symbol':'1.1-1' }}</p>

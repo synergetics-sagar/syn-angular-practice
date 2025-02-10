@@ -1,0 +1,5 @@
+<div [ngStyle]="{border: 'solid red 2px', padding: '5px'}">
+<p> <span [ngStyle]="{color: 'red'}">Red</span> Border = Parent Component</p>
+<button (click)="toggleTheme()">Toggle Theme From Parent</button>
+<app-child (childEvent)="eventFromChild($event)" [theme]="theme"></app-child>
+</div>

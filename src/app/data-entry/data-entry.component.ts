@@ -43,9 +43,11 @@ export class DataEntryComponent {
   }
 
   deleteUser(id:number){
+    
     if(this.userDataService.deleteUser(id))
     {
       alert("User Deleted")
+      this.users = this.userDataService.getAllUsers()
     }
     else{
       alert("User Not Found")

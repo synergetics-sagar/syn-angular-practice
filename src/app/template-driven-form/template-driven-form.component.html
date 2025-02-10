@@ -1,0 +1,9 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Name" [(ngModel)]="model.name" [ngModelOptions]="{standalone: true}">
+    @if (myForm.submitted && !model.name) {
+        <p [ngStyle]="{color: 'red'}">Name is Required Field</p>
+    }
+    <input type="email" placeholder="Email" [(ngModel)]="model.email" [ngModelOptions]="{standalone: true}">
+    <input type="password" placeholder="Password" [(ngModel)]="model.password" [ngModelOptions]="{standalone: true}">
+    <button type="submit">SUBMIT</button>
+</form>

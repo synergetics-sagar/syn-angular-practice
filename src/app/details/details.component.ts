@@ -15,7 +15,7 @@ export class DetailsComponent {
   user: User | undefined
 
   constructor(private route: ActivatedRoute, private userDataService: UserDataService){
-
+    
   }
 
   ngOnInit(){

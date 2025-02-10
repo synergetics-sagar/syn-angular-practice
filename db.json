@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "User One",
+      "email": "user.one@example.com",
+      "password": "123123",
+      "gender": "Male",
+      "role": "Seller"
+    },
+    {
+      "id": "301b",
+      "name": "Sample New User",
+      "email": "sample.new.user@example.com",
+      "password": "123123",
+      "gender": "male",
+      "role": "buyer"
+    },
+    {
+      "id": "075d",
+      "name": "Sample Another User",
+      "email": "sample.another.user@example.com",
+      "password": "123123",
+      "gender": "female",
+      "role": "seller"
+    },
+    {
+      "id": "7265",
+      "name": "Another User",
+      "email": "another@example.com",
+      "password": "123123",
+      "gender": "female",
+      "role": "seller"
+    }
+  ]
+}

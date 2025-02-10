@@ -1,0 +1,10 @@
+<div [ngStyle]="{border: 'solid blue 2px', padding: '5px'}">
+<p>
+    <span [ngStyle]="{color: 'blue'}">Blue</span> Border = Child Component
+</p>
+<p [ngClass]="{'light': theme=='light', 'dark': theme=='dark'}">This is Part of Child component with {{theme}} theme</p>
+<button (click)="toggleThemeFromChild()">Toggle Theme From Child</button>
+
+<h3>Count: {{count}}</h3>
+<button (click)="increment()">+</button>
+</div>

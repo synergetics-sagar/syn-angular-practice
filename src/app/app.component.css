@@ -1,6 +1,12 @@
 ul {
     list-style-type: none;
     display: flex;
+    flex-wrap:initial;
+    /* border: solid black 1px; */
+    max-height:150px;
+    overflow: auto;
+    justify-content: start;
+    padding: 20px;
 }
 
 li{
@@ -11,4 +17,6 @@ li{
     padding: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
+    text-wrap: nowrap;
 }

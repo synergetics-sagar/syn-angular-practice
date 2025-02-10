@@ -4,6 +4,13 @@
     <li routerLink="/data-entry">Data Entry</li>
 </ul> -->
 <ul>
-    <li *ngFor="let route of routeMapping" routerLink="{{route.path}}">{{route.text}}</li>
+    <!-- <li *ngFor="let route of routeMapping" routerLink="{{route.path}}">{{route.text}}</li> -->
+    @for (route of routeMapping; track $index;) {
+        <!-- Try $first, $last (bool) etc -->
+        <!-- {{$first}} -->
+        <li routerLink="{{route.path}}">{{$index+1+" "+route.text}}</li>
+    }
+
 </ul>
 <router-outlet></router-outlet>
+ <!-- <app-data-entry-http></app-data-entry-http> -->
