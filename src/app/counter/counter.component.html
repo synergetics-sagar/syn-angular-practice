@@ -1,5 +1,7 @@
+<div>
 <h1>Count: {{count}}</h1>
-<h3 *ngIf="count<0" class="message">{{message}}</h3>
-<button (click)="incrementCount()">+</button>
+<h3 *ngIf="count < 0" class="message">Counter is below zero!</h3>
+<button class="inc" (click)="incrementCount()">+</button>
 <button (click)="decrementCount()">-</button>
 <button (click)="reset()">RESET</button>
+</div>
